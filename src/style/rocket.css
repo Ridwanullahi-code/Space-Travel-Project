@@ -28,6 +28,10 @@
   font-weight: bold;
 }
 
+.not-reserved {
+  display: none;
+}
+
 .reserved {
   color: white;
   background-color: rgb(24, 162, 184);
