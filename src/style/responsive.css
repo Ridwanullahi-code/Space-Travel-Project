@@ -47,7 +47,8 @@
     width: 50px;
     font-size: 0.5rem;
   }
-  .mission-table span{
+
+  .mission-table span {
     font-size: 0.4rem;
   }
 }
@@ -56,6 +57,7 @@
   .rocket-image {
     height: 250px;
   }
+
   .mission-table button {
     font-size: 0.3rem;
   }

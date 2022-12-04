@@ -1,41 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './Logo';
 import Burger from './Burger';
+import Menu from './Menu';
 
-// import css file here
 import '../../style/navbar.css';
 
-const Navbar = () => (
-  <nav className="nav-container">
-    <Logo />
-    <Burger />
-  </nav>
-);
+const Navbar = () => {
+  const [mobile, setMobile] = useState(false);
+  return (
+    <nav className="nav-container">
+      <Logo />
+      <div className="menu">
+        <Menu isMobile={mobile} func={() => setMobile(false)} />
+        <Burger isMobile={mobile} func={() => setMobile(!mobile)} />
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;
-
-/*
-<nav className="nav-container">
-    <NavLink to="/" className="logo-link">
-      <img className="web-logo" src={logo} alt="planet logo" />
-      Space Traveler&lsquo;sHub
-    </NavLink>
-    <ul className="nav-items">
-      <li className="nav-item">
-        <NavLink className="nav-link active" to="/">
-          Rocket
-        </NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/mission">
-          Mission
-        </NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/profile">
-          Profile
-        </NavLink>
-      </li>
-    </ul>
-  </nav>
-*/

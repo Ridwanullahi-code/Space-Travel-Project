@@ -1,11 +1,16 @@
+/* eslint-disable */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Menu = (props) => {
-  const { classes } = props;
+  const { isMobile, func } = props;
+
   return (
-    <ul className={classes}>
+    <ul
+      className={isMobile ? 'nav-link-mobile' : 'nav-links'}
+      onClick={func}
+    >
       <li className="nav-item">
         <NavLink className="nav-link active" to="/">
           Rocket
@@ -27,7 +32,7 @@ const Menu = (props) => {
 
 // props validation should be proTypes
 Menu.propTypes = {
-  classes: PropTypes.string.isRequired,
-
+  isMobile: PropTypes.string.isRequired,
+  func: PropTypes.func.isRequired,
 };
 export default Menu;

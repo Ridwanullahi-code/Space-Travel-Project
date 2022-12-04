@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import Menu from './Menu';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Burger = () => {
-  const [open, setOpen] = useState(false);
+const Burger = (props) => {
+  const { isMobile, func } = props;
   return (
-    <div>
-      <div className="hamburger" onClick={() => setOpen(!open)}>
-        <span
-          className={open ? "close" : "bar"}
-          onClick={() => setOpen(open)}
-        />
-        <span className={open ? "close" : "bar"} />
-        <span className={open ? "close" : "bar"} />
-      </div>
-      <Menu classes={open ? "show-nav-items" : "nav-items"} />
-    </div>
+    <button
+      type="button"
+      className="mobile-menu-icon"
+      onClick={func}
+    >
+      {isMobile ? <i className="fa fa-times" />
+        : <i className="fa-solid fa-bars" />}
+    </button>
   );
 };
 
+// props validation should be proTypes
+Burger.propTypes = {
+  isMobile: PropTypes.string.isRequired,
+  func: PropTypes.func.isRequired,
+};
 export default Burger;
