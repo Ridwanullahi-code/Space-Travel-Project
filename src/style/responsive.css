@@ -1,0 +1,64 @@
+@media screen and (max-width: 768px) {
+  .rocket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rocket-image {
+    width: 100%;
+    margin: auto;
+    height: 350px;
+  }
+
+  .reserved {
+    width: 80px;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .rocket-info {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .rocket-info .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mission-table th {
+    font-size: 10px;
+  }
+
+  /* make mission page responsive */
+  .mission-table th:nth-child(2) {
+    width: 55%;
+  }
+
+  .mission-table td {
+    font-size: 10px;
+  }
+
+  .mission-table button {
+    width: 50px;
+    font-size: 0.5rem;
+  }
+
+  .mission-table span {
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and(max-width: 430px) {
+  .rocket-image {
+    height: 250px;
+  }
+
+  .mission-table button {
+    font-size: 0.3rem;
+  }
+}

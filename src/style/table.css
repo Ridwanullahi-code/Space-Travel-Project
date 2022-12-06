@@ -21,16 +21,8 @@
   border: 1px solid #ddd;
   padding: 6px;
   font-size: 13px;
-}
-
-.mission-table p {
-  display: flex;
-  justify-content: center;
-}
-
-.mission-table .center p,
-button {
-  margin: 30px 6px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .mission-table tbody tr {
@@ -48,6 +40,10 @@ button {
 .mission-table button {
   padding: 2px 0;
   width: 96px;
+}
+
+.mission-table span {
+  padding: 0 10px;
 }
 
 .mission-button-join {

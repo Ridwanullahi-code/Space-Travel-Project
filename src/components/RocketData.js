@@ -25,9 +25,9 @@ const RocketData = () => {
           />
           <div className="rocket-info">
             <h2 className="rocket-name">{rocket.name}</h2>
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '10px' }} className="box">
               <p className={rocket.reserved ? 'reserved' : 'not-reserved'}>
-                {`${rocket.reserved ? 'Reserved' : ''}`}
+                {`${rocket.reserved ? 'Reserved' : 'hello'}`}
               </p>
               <p className="rocket-description">{rocket.description}</p>
             </div>

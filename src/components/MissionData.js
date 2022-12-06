@@ -35,11 +35,11 @@ const MissionData = () => {
               <th scope="row">{mission.name}</th>
               <td>{mission.description}</td>
               <td className="center">
-                <p
+                <span
                   className={`mission-status-${mission.reserved ? 'active' : 'not-active'}`}
                 >
                   {mission.reserved ? 'Active Member' : 'Not A Member'}
-                </p>
+                </span>
               </td>
               <td className="text-center">
                 <button

@@ -1,17 +1,16 @@
+/* eslint-disable */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../image/planet.png';
+import PropTypes from 'prop-types';
 
-// import css file here
-import '../style/navbar.css';
+const Menu = (props) => {
+  const { isMobile, func } = props;
 
-const Navbar = () => (
-  <nav className="nav-container">
-    <NavLink to="/" className="logo-link">
-      <img className="web-logo" src={logo} alt="planet logo" />
-      Space Traveler&lsquo;sHub
-    </NavLink>
-    <ul className="nav-items">
+  return (
+    <ul
+      className={isMobile ? 'nav-link-mobile' : 'nav-links'}
+      onClick={func}
+    >
       <li className="nav-item">
         <NavLink className="nav-link active" to="/">
           Rocket
@@ -28,7 +27,12 @@ const Navbar = () => (
         </NavLink>
       </li>
     </ul>
-  </nav>
-);
+  );
+};
 
-export default Navbar;
+// props validation should be proTypes
+Menu.propTypes = {
+  isMobile: PropTypes.string.isRequired,
+  func: PropTypes.func.isRequired,
+};
+export default Menu;
